@@ -1,0 +1,47 @@
+<div id="slajd"> <img class="img-responsive" alt="MetHotels" src="slike/metropolitanbiblioteka.jpg"></div>
+<br />
+<div class="omot">
+    <h3>Најчитаније књиге</h3>
+    <br />
+    <div class="row">
+        <div class="col-md-2" *ngFor="#knjige of knjige">
+            <div id="home{{knjige.KNJIGA_ISBN}}" class="tab-pane fade in active">
+                <img src="slike/{{knjige.KNJIGA_ISBN}}.jpg" /><br />
+                <a (click)="brojpregleda(knjige.KNJIGA_ISBN, knjige.PISAC_ID)" href="knjige/{{knjige.KNJIGA_ISBN}}.pdf">{{knjige.KNJIGA_NASLOV}}</a>
+                <p>Писац: {{knjige.PISAC_IME}} {{knjige.PISAC_PREZIME}}</p>
+                <p>Бр.страна: {{knjige.KNJIGA_BROJ_STRANA}}</p>
+                <p>Издавач: {{knjige.IZDAVAC_NAZIV}}</p>
+                <p>ISBN: {{knjige.KNJIGA_ISBN}}</p>
+                <p>Бр.издања: {{knjige.KNJIGA_BROJ_IZDANJA}}</p>
+                <p>Год.издања: {{knjige.KNJIGA_GODINA_IZDANJA}}</p>
+                <p>Област: {{knjige.KNJIGA_OBLAST}}</p>
+            </div>
+            <div id="menu1{{knjige.KNJIGA_ISBN}}" class="tab-pane fade" style="position:absolute">
+                <h5 id="opisnaslov">{{knjige.KNJIGA_NASLOV}}</h5>
+                <p id="opis">{{knjige.KNJIGA_OPIS}}</p>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home{{knjige.KNJIGA_ISBN}}">Књига</a></li>
+                <li><a data-toggle="tab" href="#menu1{{knjige.KNJIGA_ISBN}}">Опис</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Најчитанији писци</h3>
+    <br />
+    <div class="row">
+        <ul class="list-group" *ngFor="#pisci of pisci">
+            <li class="list-group-item">{{pisci.PISAC_IME}} {{pisci.PISAC_PREZIME}}
+                <span class="badge">{{pisci.PISAC_BR_PREGLEDA}}</span>
+                <p style="font-size:0.9em; font-style:italic;">{{pisci.PISAC_DRZAVA}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div id="footer_omot">
+        <div id="copyright">
+            <p>Copyright Никола Кубуровић 1095</p>
+        </div>
+    </div>
+</div>

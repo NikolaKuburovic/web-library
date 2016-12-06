@@ -1,0 +1,35 @@
+<br/>
+<div class="omot">
+	<h3>Програмирање Мобилних Апликација</h3><br />
+
+	<div class="row">
+		<div class="col-md-2" *ngFor="#mobknjige of mobknjige">
+			<div id="home{{mobknjige.KNJIGA_ISBN}}" class="tab-pane fade in active">
+				<img src="slike/{{mobknjige.KNJIGA_ISBN}}.jpg" /><br />
+				<a (click)="brojpregleda(mobknjige.KNJIGA_ISBN, mobknjige.PISAC_ID)" href="knjige/{{mobknjige.KNJIGA_ISBN}}.pdf">{{mobknjige.KNJIGA_NASLOV}}</a>
+				<p>Писац: {{mobknjige.PISAC_IME}} {{mobknjige.PISAC_PREZIME}}</p>
+				<p>Бр.страна: {{mobknjige.KNJIGA_BROJ_STRANA}}</p>
+				<p>Издавач: {{mobknjige.IZDAVAC_NAZIV}}</p>
+				<p>ISBN: {{mobknjige.KNJIGA_ISBN}}</p>
+				<p>Бр.издања: {{mobknjige.KNJIGA_BROJ_IZDANJA}}</p>
+				<p>Год.издања: {{mobknjige.KNJIGA_GODINA_IZDANJA}}</p>
+				<p>Област: {{mobknjige.KNJIGA_OBLAST}}</p>
+			</div>
+			<div id="menu1{{mobknjige.KNJIGA_ISBN}}" class="tab-pane fade" style="position:absolute">
+				<h5 id="opisnaslov">{{mobknjige.KNJIGA_NASLOV}}</h5>
+				<p id="opis">{{mobknjige.KNJIGA_OPIS}}</p>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home{{mobknjige.KNJIGA_ISBN}}">Књига</a></li>
+				<li><a data-toggle="tab" href="#menu1{{mobknjige.KNJIGA_ISBN}}">Опис</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div id="footer_omot">
+		<div id="copyright">
+			<p>Copyright Никола Кубуровић 1095</p>
+		</div>
+	</div>
+</div>

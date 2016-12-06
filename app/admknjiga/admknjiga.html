@@ -1,0 +1,81 @@
+<div class="omot">
+    <h3>Књига Админ</h3><br/>
+    <p><strong>НАПОМЕНА</strong></p>
+    <p><strong>Унос нове књиге:</strong> Попуните сва поља осим поља ID, а затим кликните на "Региструј књигу"</p>
+    <p><strong>Измена постојеће књиге:</strong> Попуните сва поља, а затим кликните на "Измени књигу"</p>
+    <p><strong>Брисање постојеће књиге:</strong> Унесите само поље ISBN (број постојеће књиге), а затим кликните на "Обриши
+        књигу"
+    </p>
+    <br />
+    <form role="form" [ngFormModel]="registerForm">
+        <div class="form-group">
+            <label for="knjigaId">Књига ID</label>
+            <input type="text" class="form-control" ngControl='knjigaId'>
+        </div>
+
+        <div class="form-group">
+            <label for="pisacId">Писац</label>
+            <select class="form-control" ngControl='pisacId'>
+        
+            <option  *ngFor="#imePrezime of imePrezime" value="{{imePrezime.PISAC_ID}}">
+                {{imePrezime.PISAC_IME}} {{imePrezime.PISAC_PREZIME}}
+            </option>
+    </select>
+        </div>
+
+        <div class="form-group">
+            <label for="izdavacId">Издавач</label>
+            <select class="form-control" ngControl='izdavacId'>
+            <option  *ngFor="#izdavac of izdavac" value="{{izdavac.IZDAVAC_ID}}">
+                {{izdavac.IZDAVAC_NAZIV}}
+            </option>
+    </select>
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input type="text" class="form-control" ngControl='isbn'>
+        </div>
+        <div class="form-group">
+            <label for="naslov">Наслов</label>
+            <input type="text" class="form-control" ngControl='naslov'>
+        </div>
+        <div class="form-group">
+            <label for="brojStrana">Број страна</label>
+            <input type="text" class="form-control" ngControl='brojStrana'>
+        </div>
+        <div class="form-group">
+            <label for="brojIzdanja">Број издања</label>
+            <input type="text" class="form-control" ngControl='brojIzdanja'>
+        </div>
+        <div class="form-group">
+            <label for="godinaIzdanja">Година издања</label>
+            <input type="text" class="form-control" ngControl='godinaIzdanja'>
+        </div>
+
+        <div class="form-group">
+            <label for="oblast">Област</label>
+            <select class="form-control" ngControl='oblast'>
+        <option value="Web Programiranje">Web Programiranje</option>
+            <option value="Programski Jezici">Programski Jezici</option>            
+            <option value="Baze Podataka">Baze Podataka</option>
+            <option value="Mobilne Aplikacije">Mobilne Aplikacije</option>
+            <option value="Operativni Sistemi">Operativni Sistemi</option>
+    </select>
+        </div>
+        <div class="form-group">
+            <label for="opis">Опис</label>
+            <input type="text" class="form-control" ngControl='opis'>
+        </div>
+
+        <button (click)="dodajKnjigu()" type="reset" class="btn btn-warning">Региструј књигу</button>
+        <button (click)="izmeniKnjigu()" type="reset" class="btn btn-primary">Измени књигу</button>
+        <button (click)="obrisiKnjigu()" type="reset" class="btn btn-info">Обриши књигу</button>
+    </form>
+</div>
+<div class="footer">
+    <div id="footer_omot">
+        <div id="copyright">
+            <p>Copyright Никола Кубуровић 1095</p>
+        </div>
+    </div>
+</div>

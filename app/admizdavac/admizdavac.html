@@ -1,0 +1,38 @@
+<div class="omot">
+<h3>Издавач Админ</h3><br/>
+<p><strong>НАПОМЕНА</strong></p>
+<p><strong>Унос новог издавача:</strong> Попуните сва поља осим поља ID, а затим кликните на "Региструј издавача"</p>
+<p><strong>Измена постојећег издавача:</strong> Попуните сва поља, а затим кликните на "Измени издавача"</p>
+<p><strong>Брисање постојећег издавача:</strong> Унесите само поље ID (број постојећег издавача), а затим кликните на "Обриши
+    издавача"</p>
+<br />
+<form role="form" [ngFormModel]="registerForm">
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" class="form-control" ngControl='id'>
+    </div>
+    <div class="form-group">
+        <label for="naziv">Назив издавача</label>
+        <input type="text" class="form-control" ngControl='naziv'>
+    </div>
+    <div class="form-group">
+        <label for="mesto">Место</label>
+        <input type="text" class="form-control" ngControl='mesto'>
+    </div>
+    <div class="form-group">
+        <label for="drzava">Држава</label>
+        <input type="text" class="form-control" ngControl='drzava'>
+    </div>
+
+    <button (click)="dodajIzdavaca()" type="reset" class="btn btn-warning">Региструј издавача</button>
+    <button (click)="izmeniIzdavaca()" type="reset" class="btn btn-primary">Измени издавача</button>
+    <button (click)="obrisiIzdavaca()" type="reset" class="btn btn-info">Обриши издавача</button>
+</form>
+</div>
+<div class="footer">
+    <div id="footer_omot">
+        <div id="copyright">
+            <p>Copyright Никола Кубуровић 1095</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<br/>
+<div class="omot">
+	<h3>Веб Програмирање</h3><br />
+
+	<div class="row">
+		<div class="col-md-2" *ngFor="#webknjige of webknjige">
+			<div id="home{{webknjige.KNJIGA_ISBN}}" class="tab-pane fade in active">
+				<img src="slike/{{webknjige.KNJIGA_ISBN}}.jpg" /><br />
+				<a (click)="brojpregleda(webknjige.KNJIGA_ISBN, webknjige.PISAC_ID)" href="knjige/{{webknjige.KNJIGA_ISBN}}.pdf">{{webknjige.KNJIGA_NASLOV}}</a>
+				<p>Писац: {{webknjige.PISAC_IME}} {{webknjige.PISAC_PREZIME}}</p>
+				<p>Бр.страна: {{webknjige.KNJIGA_BROJ_STRANA}}</p>
+				<p>Издавач: {{webknjige.IZDAVAC_NAZIV}}</p>
+				<p>ISBN: {{webknjige.KNJIGA_ISBN}}</p>
+				<p>Бр.издања: {{webknjige.KNJIGA_BROJ_IZDANJA}}</p>
+				<p>Год.издања: {{webknjige.KNJIGA_GODINA_IZDANJA}}</p>
+				<p>Област: {{webknjige.KNJIGA_OBLAST}}</p>
+			</div>
+			<div id="menu1{{webknjige.KNJIGA_ISBN}}" class="tab-pane fade" style="position:absolute">
+				<h5 id="opisnaslov">{{webknjige.KNJIGA_NASLOV}}</h5>
+				<p id="opis">{{webknjige.KNJIGA_OPIS}}</p>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home{{webknjige.KNJIGA_ISBN}}">Књига</a></li>
+				<li><a data-toggle="tab" href="#menu1{{webknjige.KNJIGA_ISBN}}">Опис</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div id="footer_omot">
+		<div id="copyright">
+			<p>Copyright Никола Кубуровић 1095</p>
+		</div>
+	</div>
+</div>

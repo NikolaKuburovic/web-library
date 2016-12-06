@@ -1,0 +1,35 @@
+<br/>
+<div class="omot">
+	<h3>Базе Података</h3><br />
+
+	<div class="row">
+		<div class="col-md-2" *ngFor="#bazeknjige of bazeknjige">
+			<div id="home{{bazeknjige.KNJIGA_ISBN}}" class="tab-pane fade in active">
+				<img src="slike/{{bazeknjige.KNJIGA_ISBN}}.jpg" /><br />
+				<a (click)="brojpregleda(bazeknjige.KNJIGA_ISBN, bazeknjige.PISAC_ID)" href="knjige/{{bazeknjige.KNJIGA_ISBN}}.pdf">{{bazeknjige.KNJIGA_NASLOV}}</a>
+				<p>Писац: {{bazeknjige.PISAC_IME}} {{bazeknjige.PISAC_PREZIME}}</p>
+				<p>Бр.страна: {{bazeknjige.KNJIGA_BROJ_STRANA}}</p>
+				<p>Издавач: {{bazeknjige.IZDAVAC_NAZIV}}</p>
+				<p>ISBN: {{bazeknjige.KNJIGA_ISBN}}</p>
+				<p>Бр.издања: {{bazeknjige.KNJIGA_BROJ_IZDANJA}}</p>
+				<p>Год.издања: {{bazeknjige.KNJIGA_GODINA_IZDANJA}}</p>
+				<p>Област: {{bazeknjige.KNJIGA_OBLAST}}</p>
+			</div>
+			<div id="menu1{{bazeknjige.KNJIGA_ISBN}}" class="tab-pane fade" style="position:absolute">
+				<h5 id="opisnaslov">{{bazeknjige.KNJIGA_NASLOV}}</h5>
+				<p id="opis">{{bazeknjige.KNJIGA_OPIS}}</p>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home{{bazeknjige.KNJIGA_ISBN}}">Књига</a></li>
+				<li><a data-toggle="tab" href="#menu1{{bazeknjige.KNJIGA_ISBN}}">Опис</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div id="footer_omot">
+		<div id="copyright">
+			<p>Copyright Никола Кубуровић 1095</p>
+		</div>
+	</div>
+</div>

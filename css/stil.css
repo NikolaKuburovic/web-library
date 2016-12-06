@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+h1, h2, h3, h4, h5{
+    font-stretch: condensed;
+}
+
+.col-md-2{
+    border: solid 1px #eee;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    height: 430px;
+    margin-bottom: 20px;
+}
+.col-md-2 p {
+    margin: auto;
+}
+.col-md-2 a {
+    position: relative;
+    z-index: 1;
+}
+.col-md-2 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.col-md-2:hover{
+    border-color:#ddd;
+    box-shadow: 0px 0px 7px 3px #ddd;
+}
+.list-group-item:hover{
+    border-color:#bbb;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+.navbar-inverse .navbar-brand{
+    color:#555;
+}
+.container-fluid {
+    background: #fff;
+    border-color: #fff;
+}
+
+.btn-success{
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+input.form-control.ng-untouched.ng-pristine.ng-valid{
+    margin-right: 20px;
+}
+
+form.navbar-form.navbar-left{
+    margin-bottom: 40px;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color: #777;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #111;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{
+    text-shadow: none;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #111;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #222;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: -30px;
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: #333;
+}
+
+.glyphicon-log-in {
+    margin-right: 5px;
+}
+
+#jezik {
+    background-color: #777;
+    border-color: #777;
+}
+
+#lang {
+    color: #777;
+    padding-top: 15px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+#jezik:hover,
+#jezik:focus,
+#jezik:active,
+#jezik.active,
+#jezik .open > .dropdown-toggle#jezik {
+    background-color: #999;
+    border-color: #999;
+}
+
+#jezik {
+    margin-top: 12px;
+}
+
+.col-sm-4 {
+    background-color: #fefefe;
+}
+
+.row {
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    background-color: #fefefe;
+    padding-bottom: 30px;
+}
+.omot{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+    clear: both;
+}
+
+.footer {
+    font-size: 0.9em;
+}
+
+#footer_omot {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#copyright {
+    float: left;
+    color: #777;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+
+.dropdown-menu > li{
+    margin: 3px 0 3px 0;
+}
+/*-------------------------------------------------*/
+
+.tab-pane.fade {
+    left: 0px;
+    right: 0px;
+    top: 5px;
+}
+.tab-pane.fade.in.active > p{
+    
+   display: block;
+}
+
+.nav.nav-tabs{
+    position:absolute;
+    bottom: 0px;
+}
+
+#opis{
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#opisnaslov{
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 10px;
+}
